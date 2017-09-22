@@ -1,0 +1,2 @@
+class Nandeyanen < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: nandeyanen, local: true) do |form| %>
+  <% if nandeyanen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nandeyanen.errors.count, "error") %> prohibited this nandeyanen from being saved:</h2>
+
+      <ul>
+      <% nandeyanen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :nandeyanen_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_field :message, id: :nandeyanen_message %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
